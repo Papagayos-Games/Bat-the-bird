@@ -14,17 +14,17 @@
         "Component": "MeshComponent",
         "Type": "Render",
         "Parameters": {
-          "meshName": "penguin",
-          "meshMaterial": "Practica1_Azulejo"
+          "meshName": "penguin"
         }
       },
       {
         "Component": "RigidBody",
         "Type": "Physics",
         "Parameters": {
-          "dampingLin": 0,
+          "dampingLin": 0.2,
           "dampingAng": 0,
-          "gravity": [ 0.0, 0.0, 0.0 ],
+          "mass":2,
+          "gravity": [ 0.0, -9.8, 0.0 ],
           "restitution": 0.5,
           "linealVel": [ 0.0, 0.0, 0.0 ],
           "friction": 0.5,
@@ -35,18 +35,11 @@
         }
       },
       {
-        "Component": "playerController",
+        "Component": "ballBehaviour",
         "Type": "LUA",
         "Parameters": {
-          "speed" : 5
-        }
-      }
-      ,
-      {
-        "Component": "playerShooting",
-        "Type": "LUA",
-        "Parameters": {
-
+          "iniStrength": 10,
+          "sweetspot": 2.5
         }
       }
   ]
