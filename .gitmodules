@@ -1,0 +1,3 @@
+[submodule "BatTheBird/dependencies/Papagayo-Engine"]
+	path = BatTheBird/dependencies/Papagayo-Engine
+	url = https://github.com/Papagayos-Games/Papagayo-Engine
