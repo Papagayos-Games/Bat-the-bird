@@ -23,8 +23,29 @@
             "Component": "Transform",
             "Type": "Common",
             "Parameters": {
-              "position":[-30, 0, 0],
+              "position":[-30, 40, 0],
               "dimensions": [ 0.2, 0.2, 0.2 ]
+            }
+          }
+        ]
+      },
+      {
+        "Name": "floor",
+        "Components": [
+          {
+            "Component": "Transform",
+            "Type": "Common",
+            "Parameters": {
+              "position":[0, -20, 0],
+              "dimensions": [ 1, 0.1, 1 ]
+            }
+          },
+          {
+            "Component": "MeshComponent",
+            "Type": "Render",
+            "Parameters": {
+              "meshName": "cube",
+              "meshMaterial": "Practica1_Azulejo"
             }
           }
         ]

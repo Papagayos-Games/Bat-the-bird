@@ -35,11 +35,11 @@
         }
       },
       {
-        "Component": "ballBehaviour",
+        "Component": "batBehaviour",
         "Type": "LUA",
         "Parameters": {
-          "iniStrength": 10,
-          "sweetspot": 2.5
+          "maxStrength": 10,
+          "sweetspot": 2.25
         }
       }
   ]
