@@ -139,7 +139,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\UI;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Common;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Graphics;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Physics;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Audio;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\LUA;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Input;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>

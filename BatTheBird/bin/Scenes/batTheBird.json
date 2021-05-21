@@ -47,6 +47,18 @@
               "meshName": "cube",
               "meshMaterial": "Practica1_Azulejo"
             }
+          },
+          {
+            "Component": "RigidBody",
+            "Type": "Physics",
+            "Parameters": {
+              "group": 0,
+              "mask": 0,
+              "state": "Static",
+              "shape": {
+                "id": "Box"
+              }
+            }
           }
         ]
       }

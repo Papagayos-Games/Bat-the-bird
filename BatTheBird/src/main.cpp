@@ -19,7 +19,12 @@ int main() {
 	try {
 		if (!PapagayoEngine::setupInstance("Bat the Bird"))
 			throw std::exception("Couldn't Initialize Papagayo Engine\n");
-		PapagayoEngine::getInstance()->init();
+		PapagayoEngine::getInstance()->init(
+			"TaharezLook",
+			"TaharezLook.scheme", 
+			"DejaVuSans-12.font", 
+			"Scenes/scenes.json"
+		);
 	}
 	catch (std::exception e) {
 		std::cout << e.what() << "\n";

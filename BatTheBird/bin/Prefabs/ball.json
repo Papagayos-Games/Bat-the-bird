@@ -23,6 +23,8 @@
         "Parameters": {
           "dampingLin": 0.2,
           "dampingAng": 0,
+          "group": 0,
+          "mask": 0,
           "mass":2,
           "gravity": [ 0.0, -9.8, 0.0 ],
           "restitution": 0.5,
