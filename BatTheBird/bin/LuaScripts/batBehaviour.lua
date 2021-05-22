@@ -35,7 +35,7 @@ batBehaviour["update"] = function (_self, lua)
 
     if((not _self.batted) and input:mouseButtonPressed() == 1) then
         local strength = _self.maxStrength * (_self.sweetspot - (math.abs(_self.sweetspot - _self.time)))
-        _self.rb:addForce1(Vector3(0, 5 * strength, 0), Vector3(0,0,0), 1)
+        _self.rb:addForce1(Vector3(0, 1000 * strength, 0), Vector3(0,0,0), 1)
         _self.batted = true
         print(strength)
     end
@@ -49,5 +49,19 @@ batBehaviour["update"] = function (_self, lua)
         _self.batted = false
     end
 end
+
+
+batBehaviour["onCollisionEnter"] = function(_self, lua, otherRb)
+    print("CollisionEnter")
+end
+
+batBehaviour["onCollisionStay"] = function(_self, lua, otherRb)
+    print("CollisionStay")
+end
+
+batBehaviour["onCollisionExit"] = function(_self, lua, otherRb)
+    print("CollisionExit")
+end
+
 
 return batBehaviour
