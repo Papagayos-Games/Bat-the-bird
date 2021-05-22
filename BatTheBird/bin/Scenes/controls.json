@@ -1,0 +1,65 @@
+{
+  "Entities": [
+    {
+      "Name": "defaultCamera",
+      "Prefab": "DefaultCamera",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [ 0, 0, 500 ]
+          }
+        }
+      ]
+    },
+    {
+      "Prefab": "ControlsMenu/backButton"
+    },
+    {
+      "Name": "mouseImage",
+      "Components": [
+        {
+          "Component": "Image",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.08, 0.2 ],
+            "size": [ 200, 400 ],
+            "name": "MouseImage",
+            "type": "StaticImage",
+            "property": [
+              [
+                "Image",
+                "TaharezLook/MouseBg"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TextoControles",
+      "Components": [
+        {
+          "Component": "Label",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.28, 0.2 ],
+            "size": [ 600, 300 ],
+            "name": "Label",
+            "text": "- Movimiento Jugador: Moviendo raton - PowerUp1: click Izq - PowerUp2: click Der",
+            "type": "Label"
+          }
+        }
+      ]
+    }
+  ]
+}

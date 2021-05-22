@@ -1,0 +1,36 @@
+{
+  "Components": [
+    {
+      "Component": "Button",
+      "Type": "UI",
+      "Parameters": {
+        "position": [ 0.4, 0.65 ],
+        "size": [ 300, 100 ],
+        "name": "ExitButton",
+        "text": "SALIR",
+        "type": "Button",
+        "property": [
+          [
+            "NormalImage",
+            "TaharezLook/ButtonBg"
+          ],
+          [
+            "PushedImage",
+            "TaharezLook/ButtonBg"
+          ],
+          [
+            "HoverImage",
+            "TaharezLook/ButtonBg"
+          ]
+        ]
+      }
+    },
+    {
+      "Component": "CloseGame",
+      "Type": "LUA",
+      "Parameters": {
+          
+      }
+    }
+  ]
+}

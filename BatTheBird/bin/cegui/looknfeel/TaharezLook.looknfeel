@@ -66,9 +66,6 @@
         </ImagerySection>
         <ImagerySection name="normal">
             <FrameComponent>
-                <Image component="LeftEdge" name="TaharezLook/ButtonLeftNormal" />
-                <Image component="RightEdge" name="TaharezLook/ButtonRightNormal" />
-                <Image component="Background" name="TaharezLook/ButtonMiddleNormal" />
             </FrameComponent>
             <ImageryComponent>
                 <ImageProperty name="NormalImage" />
@@ -78,9 +75,6 @@
         </ImagerySection>
         <ImagerySection name="hover">
             <FrameComponent>
-                <Image component="LeftEdge" name="TaharezLook/ButtonLeftHighlight" />
-                <Image component="RightEdge" name="TaharezLook/ButtonRightHighlight" />
-                <Image component="Background" name="TaharezLook/ButtonMiddleHighlight" />
             </FrameComponent>
             <ImageryComponent>
                 <ImageProperty name="HoverImage" />
@@ -90,9 +84,6 @@
         </ImagerySection>
         <ImagerySection name="pushed">
             <FrameComponent>
-                <Image component="LeftEdge" name="TaharezLook/ButtonLeftPushed" />
-                <Image component="RightEdge" name="TaharezLook/ButtonRightPushed" />
-                <Image component="Background" name="TaharezLook/ButtonMiddlePushed" />
             </FrameComponent>
             <ImageryComponent>
                 <ImageProperty name="PushedImage" />
@@ -102,9 +93,6 @@
         </ImagerySection>
         <ImagerySection name="disabled">
             <FrameComponent>
-                <Image component="LeftEdge" name="TaharezLook/ButtonLeftNormal" />
-                <Image component="RightEdge" name="TaharezLook/ButtonRightNormal" />
-                <Image component="Background" name="TaharezLook/ButtonMiddleNormal" />
             </FrameComponent>
             <ImageryComponent>
                 <ImageProperty name="DisabledImage" />

@@ -1,0 +1,12 @@
+{
+  "Components": [
+    {
+      "Component": "Pointer",
+      "Type": "UI",
+      "Parameters": {
+        "pointerImage": "TaharezLook/PebloPuntero",
+        "visible": true
+      }
+    }
+  ]
+}
