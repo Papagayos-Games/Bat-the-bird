@@ -1,0 +1,52 @@
+{
+  "Entities": [
+    {
+      "Name": "defaultCamera",
+      "Prefab": "DefaultCamera",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [ 0, 0, 500 ]
+          }
+        }
+      ]
+    },
+    {
+      "Name": "infoImage",
+      "Components": [
+        {
+          "Component": "Image",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.1, 0.1 ],
+            "size": [ 1280, 720 ],
+            "name": "InfoImage",
+            "type": "StaticImage",
+            "property": [
+              [
+                "Image",
+                "TaharezLook/InfoBg"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Prefab": "InfoMenu/backButton"
+    },
+    {
+      "Prefab": "InfoMenu/startButton"
+    }
+  ]
+}

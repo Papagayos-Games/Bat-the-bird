@@ -1,0 +1,61 @@
+{
+  "Entities": [
+    {
+      "Name": "defaultCamera",
+      "Prefab": "DefaultCamera",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [ 0, 0, 500 ]
+          }
+        }
+      ]
+    },
+    {
+      "Prefab": "MainMenu/startButton"
+    },
+    {
+      "Prefab": "MainMenu/creditosButton"
+    },
+    {
+      "Prefab": "MainMenu/scoreboardButton"
+    },
+    {
+      "Prefab": "MainMenu/exitButton"
+    },
+    {
+      "Prefab": "pointer"
+    },
+    {
+      "Name": "titleImage",
+      "Components": [
+        {
+          "Component": "Image",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.2, 0.1 ],
+            "size": [ 960, 180 ],
+            "name": "TitleImage",
+            "type": "StaticImage",
+            "property": [
+              [
+                "Image",
+                "TaharezLook/TitleBg"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

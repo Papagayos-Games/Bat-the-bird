@@ -1,5 +1,9 @@
 {
-    "SceneFiles" :  [
-        "batTheBird"
-    ]
+  "SceneFiles": [
+    "mainMenu",
+    "batTheBird",
+    "info",
+    "scoreboard",
+    "credits"
+  ]
 }

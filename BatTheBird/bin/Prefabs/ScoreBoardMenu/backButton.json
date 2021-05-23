@@ -1,0 +1,36 @@
+{
+  "Components": [
+    {
+      "Component": "Button",
+      "Type": "UI",
+      "Parameters": {
+        "position": [ 0.33, 0.65 ],
+        "size": [ 533, 100 ],
+        "name": "BackButton",
+        "text": "",
+        "type": "Button",
+        "property": [
+          [
+            "NormalImage",
+            "TaharezLook/VolverButtonBg"
+          ],
+          [
+            "PushedImage",
+            "TaharezLook/VolverButtonBg"
+          ],
+          [
+            "HoverImage",
+            "TaharezLook/VolverButtonBg"
+          ]
+        ]
+      }
+    },
+    {
+      "Component": "ChangeScene",
+      "Type": "LUA",
+      "Parameters": {
+        "scene": "mainMenu"
+      }
+    }
+  ]
+}

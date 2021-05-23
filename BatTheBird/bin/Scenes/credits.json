@@ -1,0 +1,49 @@
+{
+  "Entities": [
+    {
+      "Name": "defaultCamera",
+      "Prefab": "DefaultCamera",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [ 0, 0, 500 ]
+          }
+        }
+      ]
+    },
+    {
+      "Prefab": "CreditsMenu/backButton"
+    },
+    {
+      "Name": "creditsImage",
+      "Components": [
+        {
+          "Component": "Image",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.2, 0.2 ],
+            "size": [ 960, 450 ],
+            "name": "CreditsImage",
+            "type": "StaticImage",
+            "property": [
+              [
+                "Image",
+                "TaharezLook/CreditsBg"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

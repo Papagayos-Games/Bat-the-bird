@@ -1,0 +1,36 @@
+{
+  "Components": [
+    {
+      "Component": "Button",
+      "Type": "UI",
+      "Parameters": {
+        "position": [ 0.2, 0.6 ],
+        "size": [ 320, 90 ],
+        "name": "CreditButton",
+        "text": "",
+        "type": "Button",
+        "property": [
+          [
+            "NormalImage",
+            "TaharezLook/CreditosButtonBg"
+          ],
+          [
+            "PushedImage",
+            "TaharezLook/CreditosButtonBg"
+          ],
+          [
+            "HoverImage",
+            "TaharezLook/CreditosButtonBg"
+          ]
+        ]
+      }
+    },
+    {
+      "Component": "ChangeScene",
+      "Type": "LUA",
+      "Parameters": {
+        "scene": "credits"
+      }
+    }
+  ]
+}

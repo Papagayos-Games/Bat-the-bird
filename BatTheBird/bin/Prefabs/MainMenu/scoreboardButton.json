@@ -1,0 +1,36 @@
+{
+  "Components": [
+    {
+      "Component": "Button",
+      "Type": "UI",
+      "Parameters": {
+        "position": [ 0.6, 0.4 ],
+        "size": [ 320, 90 ],
+        "name": "ScoreButton",
+        "text": "",
+        "type": "Button",
+        "property": [
+          [
+            "NormalImage",
+            "TaharezLook/PuntuacionesButtonBg"
+          ],
+          [
+            "PushedImage",
+            "TaharezLook/PuntuacionesButtonBg"
+          ],
+          [
+            "HoverImage",
+            "TaharezLook/PuntuacionesButtonBg"
+          ]
+        ]
+      }
+    },
+    {
+      "Component": "ChangeScene",
+      "Type": "LUA",
+      "Parameters": {
+        "scene": "scoreboard"
+      }
+    }
+  ]
+}
