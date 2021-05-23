@@ -6,7 +6,7 @@
         "Parameters": {
           "position": [ 0, 0, 0],
           "velocity": [ 0, 0, 0 ],
-          "dimensions": [ 1, 1, 1 ],
+          "dimensions": [0.5, 0.5, 0.5 ],
           "rotation": [ 0, 0, 0 ]
         }
       },
@@ -25,14 +25,16 @@
           "dampingAng": 0,
           "group": 128,
           "mask": 64,
-          "mass":2,
+          "mass":0.1,
+          "mShape" : false,
           "gravity": [ 0.0, -9.8, 0.0 ],
-          "restitution": 0.5,
+          "restitution": 100.0,
           "linealVel": [ 0.0, 0.0, 0.0 ],
           "friction": 0.5,
           "state": "None",
           "shape": {
-            "id": "Box"
+            "id": "Sphere",
+            "radius": 10.0
           }
         }
       },

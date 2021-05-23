@@ -23,7 +23,9 @@ int main() {
 			"TaharezLook",
 			"TaharezLook.scheme", 
 			"DejaVuSans-12.font", 
-			"Scenes/scenes.json"
+			"Scenes/scenes.json",
+			"Assets/badbunny.mp3",
+			"SkyPlaneMat"
 		);
 	}
 	catch (std::exception e) {

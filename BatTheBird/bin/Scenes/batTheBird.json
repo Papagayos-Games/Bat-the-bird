@@ -8,7 +8,7 @@
             "Component": "Transform",
             "Type": "Common",
             "Parameters" : {
-              "position" : [0,0,500]
+              "position" : [0,100,500]
             }
           }
         ]
@@ -23,8 +23,7 @@
             "Component": "Transform",
             "Type": "Common",
             "Parameters": {
-              "position":[-30, 100, 0],
-              "dimensions": [ 1,1,1 ]
+              "position":[-30, 150, 0]
             }
           }
         ]
@@ -36,7 +35,7 @@
             "Component": "Transform",
             "Type": "Common",
             "Parameters": {
-              "position":[0, -100, 0],
+              "position":[0, 0, 0],
               "dimensions": [ 1, 0.5, 1 ]
             }
           },
@@ -54,6 +53,7 @@
             "Parameters": {
               "group": 64,
               "mask": 128,
+              "restitution": 1.0,
               "state": "Kinematic",
               "shape": {
                 "id": "Box"
