@@ -1,9 +1,16 @@
 <Imageset autoScaled="true" imagefile="TaharezLook.png" name="TaharezLook" nativeHorzRes="1280" nativeVertRes="720" version="2">
     <Image height="464" name="MenuBg" width="651" xPos="0" yPos="256" />
     <Image height="154" name="ButtonBg" width="257" xPos="512" yPos="0" />
+    <Image height="128" name="VolverButtonBg" width="255" xPos="1024" yPos="256" />
+    <Image height="128" name="PlayButtonBg" width="255" xPos="1024" yPos="0" />
+    <Image height="128" name="PuntuacionesButtonBg" width="256" xPos="1280" yPos="0" />
+    <Image height="128" name="CreditosButtonBg" width="256" xPos="1536" yPos="0" />
+    <Image height="128" name="ControlesButtonBg" width="256" xPos="1280" yPos="256" />
+    <Image height="128" name="SalirButtonBg" width="256" xPos="1536" yPos="256" />
     <Image height="256" name="MouseBg" width="256" xPos="768" yPos="0" />
-    <Image height="256" name="CreditsBg" width="512" xPos="768" yPos="256" />
-    <Image height="150" name="TitleBg" width="700" xPos="655" yPos="520" />
+    <Image height="256" name="CreditsBg" width="512" xPos="0" yPos="256" />
+    <Image height="500" name="InfoBg" width="1024" xPos="0" yPos="524" />
+    <Image height="128" name="TitleBg" width="640" xPos="512" yPos="384" />
     <Image height="50" name="GreenArrow" width="40" xPos="432" yPos="206" />
     <Image height="50" name="PebloPuntero" width="40" xPos="472" yPos="206" />
     <Image height="220" name="Peblo" width="155" xPos="256" yPos="0" />

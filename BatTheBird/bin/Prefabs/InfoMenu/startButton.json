@@ -4,23 +4,23 @@
       "Component": "Button",
       "Type": "UI",
       "Parameters": {
-        "position": [ 0.33, 0.8 ],
-        "size": [ 533, 100 ],
-        "name": "BackButton",
-        "text": "VOLVER",
+        "position": [ 0.15, 0.15 ],
+        "size": [ 320, 90 ],
+        "name": "StartButton",
+        "text": "",
         "type": "Button",
         "property": [
           [
             "NormalImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/PlayButtonBg"
           ],
           [
             "PushedImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/PlayButtonBg"
           ],
           [
             "HoverImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/PlayButtonBg"
           ]
         ]
       }
@@ -29,7 +29,7 @@
       "Component": "ChangeScene",
       "Type": "LUA",
       "Parameters": {
-        "scene": "mainMenu"
+        "scene": "batTheBird"
       }
     }
   ]

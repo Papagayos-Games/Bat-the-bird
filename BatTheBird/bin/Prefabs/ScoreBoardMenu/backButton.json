@@ -7,20 +7,20 @@
         "position": [ 0.33, 0.65 ],
         "size": [ 533, 100 ],
         "name": "BackButton",
-        "text": "VOLVER",
+        "text": "",
         "type": "Button",
         "property": [
           [
             "NormalImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/VolverButtonBg"
           ],
           [
             "PushedImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/VolverButtonBg"
           ],
           [
             "HoverImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/VolverButtonBg"
           ]
         ]
       }

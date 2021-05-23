@@ -14,23 +14,20 @@
       ]
     },
     {
-      "Prefab": "ControlsMenu/backButton"
-    },
-    {
-      "Name": "mouseImage",
+      "Name": "infoImage",
       "Components": [
         {
           "Component": "Image",
           "Type": "UI",
           "Parameters": {
-            "position": [ 0.08, 0.2 ],
-            "size": [ 200, 400 ],
-            "name": "MouseImage",
+            "position": [ 0.1, 0.1 ],
+            "size": [ 1280, 720 ],
+            "name": "InfoImage",
             "type": "StaticImage",
             "property": [
               [
                 "Image",
-                "TaharezLook/MouseBg"
+                "TaharezLook/InfoBg"
               ],
               [
                 "FrameEnabled",
@@ -46,20 +43,10 @@
       ]
     },
     {
-      "Name": "TextoControles",
-      "Components": [
-        {
-          "Component": "Label",
-          "Type": "UI",
-          "Parameters": {
-            "position": [ 0.28, 0.2 ],
-            "size": [ 600, 300 ],
-            "name": "Label",
-            "text": "- Movimiento Jugador: Moviendo raton - PowerUp1: click Izq - PowerUp2: click Der",
-            "type": "Label"
-          }
-        }
-      ]
+      "Prefab": "InfoMenu/backButton"
+    },
+    {
+      "Prefab": "InfoMenu/startButton"
     }
   ]
 }

@@ -4,7 +4,7 @@
       "Component": "Pointer",
       "Type": "UI",
       "Parameters": {
-        "pointerImage": "TaharezLook/PebloPuntero",
+        "pointerImage": "TaharezLook/GreenArrow",
         "visible": true
       }
     }

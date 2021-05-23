@@ -2,7 +2,7 @@
   "SceneFiles": [
     "mainMenu",
     "batTheBird",
-    "controls",
+    "info",
     "scoreboard",
     "credits"
   ]

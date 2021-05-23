@@ -17,9 +17,6 @@
       "Prefab": "MainMenu/startButton"
     },
     {
-      "Prefab": "MainMenu/controlesButton"
-    },
-    {
       "Prefab": "MainMenu/creditosButton"
     },
     {
@@ -38,8 +35,8 @@
           "Component": "Image",
           "Type": "UI",
           "Parameters": {
-            "position": [ 0.33, 0.1 ],
-            "size": [ 650, 200 ],
+            "position": [ 0.2, 0.1 ],
+            "size": [ 960, 180 ],
             "name": "TitleImage",
             "type": "StaticImage",
             "property": [
