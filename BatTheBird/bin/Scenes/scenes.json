@@ -1,7 +1,7 @@
 {
   "SceneFiles": [
-    "mainMenu",
     "batTheBird",
+    "mainMenu",
     "info",
     "scoreboard",
     "gameOver",

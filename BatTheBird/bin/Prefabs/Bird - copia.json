@@ -1,0 +1,75 @@
+{
+  "Name": "Cohete",
+  "Components": [
+    {
+      "Component": "Transform",
+      "Type": "Common",
+      "Parameters": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "dimensions": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "Component": "MeshComponent",
+      "Type": "Render",
+      "Parameters": {
+        "meshName": "penguin"
+      }
+    },
+    {
+      "Component": "RigidBody",
+      "Type": "Physics",
+      "Parameters": {
+        "dampingLin": 0.05,
+        "dampingAng": 0,
+        "group": 128,
+        "mask": 64,
+        "mass": 0.28,
+        "mShape": false,
+        "gravity": [
+          0.0,
+          -9.8,
+          0.0
+        ],
+        "restitution": 1.0,
+        "linealVel": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "friction": 0.1,
+        "state": "None",
+        "shape": {
+          "id": "Sphere",
+          "radius": 10.0
+        }
+      }
+    },
+    {
+      "Component": "batBehaviour",
+      "Type": "LUA",
+      "Parameters": {
+        "strength": 10,
+        "sweetspot": 3.0
+      }
+    }
+  ]
+}
