@@ -12,15 +12,15 @@
         "property": [
           [
             "NormalImage",
-            "TaharezLook/CreditosButtonBg"
+            "TaharezLook/CreditosNormalButton"
           ],
           [
             "PushedImage",
-            "TaharezLook/CreditosButtonBg"
+            "TaharezLook/CreditosPushButton"
           ],
           [
             "HoverImage",
-            "TaharezLook/CreditosButtonBg"
+            "TaharezLook/CreditosHoverButton"
           ]
         ]
       }

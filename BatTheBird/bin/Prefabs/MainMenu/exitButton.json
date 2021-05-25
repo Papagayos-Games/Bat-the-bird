@@ -12,15 +12,15 @@
         "property": [
           [
             "NormalImage",
-            "TaharezLook/SalirButtonBg"
+            "TaharezLook/SalirNormalButton"
           ],
           [
             "PushedImage",
-            "TaharezLook/SalirButtonBg"
+            "TaharezLook/SalirPushButton"
           ],
           [
             "HoverImage",
-            "TaharezLook/SalirButtonBg"
+            "TaharezLook/SalirHoverButton"
           ]
         ]
       }

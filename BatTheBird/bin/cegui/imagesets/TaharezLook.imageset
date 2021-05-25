@@ -1,12 +1,42 @@
 <Imageset autoScaled="true" imagefile="TaharezLook.png" name="TaharezLook" nativeHorzRes="1280" nativeVertRes="720" version="2">
     <Image height="464" name="MenuBg" width="651" xPos="0" yPos="256" />
     <Image height="154" name="ButtonBg" width="257" xPos="512" yPos="0" />
-    <Image height="128" name="VolverButtonBg" width="255" xPos="1024" yPos="256" />
-    <Image height="128" name="PlayButtonBg" width="255" xPos="1024" yPos="0" />
-    <Image height="128" name="PuntuacionesButtonBg" width="256" xPos="1280" yPos="0" />
-    <Image height="128" name="CreditosButtonBg" width="256" xPos="1536" yPos="0" />
-    <Image height="128" name="ControlesButtonBg" width="256" xPos="1280" yPos="256" />
-    <Image height="128" name="SalirButtonBg" width="256" xPos="1536" yPos="256" />
+
+
+    <Image height="128" name="PlayNormalButton" width="255" xPos="1024" yPos="0" />
+    <Image height="128" name="PlayHoverButton" width="255" xPos="1792" yPos="0" />
+    <Image height="128" name="PlayPushButton" width="255" xPos="1024" yPos="512" />
+
+    <Image height="128" name="PuntuacionesNormalButton" width="256" xPos="1280" yPos="0" />
+    <Image height="128" name="PuntuacionesHoverButton" width="256" xPos="2048" yPos="0" />
+    <Image height="128" name="PuntuacionesPushButton" width="256" xPos="1280" yPos="512" />
+
+    <Image height="128" name="CreditosNormalButton" width="256" xPos="1536" yPos="0" />
+    <Image height="128" name="CreditosHoverButton" width="256" xPos="2304" yPos="0" />
+    <Image height="128" name="CreditosPushButton" width="256" xPos="1536" yPos="512" />
+
+    <Image height="128" name="VolverNormalButton" width="255" xPos="1024" yPos="256" />
+    <Image height="128" name="VolverHoverButton" width="255" xPos="1792" yPos="256" />
+    <Image height="128" name="VolverPushButton" width="255" xPos="1792" yPos="512" />
+
+    <Image height="128" name="ControlesNormalButton" width="256" xPos="1280" yPos="256" />
+    <Image height="128" name="ControlesHoverButton" width="256" xPos="2048" yPos="256" />
+    <Image height="128" name="ControlesPushButton" width="256" xPos="2048" yPos="512" />
+
+    <Image height="128" name="SalirNormalButton" width="256" xPos="1536" yPos="256" />
+    <Image height="128" name="SalirHoverButton" width="256" xPos="2304" yPos="256" />
+    <Image height="128" name="SalirPushButton" width="256" xPos="2304" yPos="512" />
+
+    <Image height="128" name="MenuNormalButton" width="256" xPos="1024" yPos="768" />
+    <Image height="128" name="MenuHoverButton" width="256" xPos="1280" yPos="768" />
+    <Image height="128" name="MenuPushButton" width="256" xPos="1536" yPos="768" />
+
+    <Image height="128" name="GameOver" width="530" xPos="1788" yPos="896" />
+
+    <Image height="375" name="ScoreGameOver" width="512" xPos="0" yPos="1035" />
+
+    <Image height="375" name="HighScoresPanel" width="512" xPos="512" yPos="1050" />
+
     <Image height="256" name="MouseBg" width="256" xPos="768" yPos="0" />
     <Image height="256" name="CreditsBg" width="512" xPos="0" yPos="256" />
     <Image height="500" name="InfoBg" width="1024" xPos="0" yPos="524" />

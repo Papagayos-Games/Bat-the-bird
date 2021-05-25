@@ -1,0 +1,36 @@
+{
+  "Components": [
+    {
+      "Component": "Button",
+      "Type": "UI",
+      "Parameters": {
+        "position": [ 0.1, 0.75 ],
+        "size": [ 320, 90 ],
+        "name": "StartButton",
+        "text": "",
+        "type": "Button",
+        "property": [
+          [
+            "NormalImage",
+            "TaharezLook/PlayNormalButton"
+          ],
+          [
+            "PushedImage",
+            "TaharezLook/PlayPushButton"
+          ],
+          [
+            "HoverImage",
+            "TaharezLook/PlayHoverButton"
+          ]
+        ]
+      }
+    },
+    {
+      "Component": "ChangeScene",
+      "Type": "LUA",
+      "Parameters": {
+        "scene": "batTheBird"
+      }
+    }
+  ]
+}

@@ -12,15 +12,15 @@
         "property": [
           [
             "NormalImage",
-            "TaharezLook/VolverButtonBg"
+            "TaharezLook/VolverNormalButton"
           ],
           [
             "PushedImage",
-            "TaharezLook/VolverButtonBg"
+            "TaharezLook/VolverPushButton"
           ],
           [
             "HoverImage",
-            "TaharezLook/VolverButtonBg"
+            "TaharezLook/VolverHoverButton"
           ]
         ]
       }

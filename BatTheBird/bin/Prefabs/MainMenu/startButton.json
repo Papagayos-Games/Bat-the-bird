@@ -12,15 +12,15 @@
         "property": [
           [
             "NormalImage",
-            "TaharezLook/PlayButtonBg"
+            "TaharezLook/PlayNormalButton"
           ],
           [
             "PushedImage",
-            "TaharezLook/PlayButtonBg"
+            "TaharezLook/PlayPushButton"
           ],
           [
             "HoverImage",
-            "TaharezLook/PlayButtonBg"
+            "TaharezLook/PlayHoverButton"
           ]
         ]
       }

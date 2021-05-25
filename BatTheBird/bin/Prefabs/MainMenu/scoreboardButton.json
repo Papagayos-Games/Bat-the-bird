@@ -12,15 +12,15 @@
         "property": [
           [
             "NormalImage",
-            "TaharezLook/PuntuacionesButtonBg"
+            "TaharezLook/PuntuacionesNormalButton"
           ],
           [
             "PushedImage",
-            "TaharezLook/PuntuacionesButtonBg"
+            "TaharezLook/PuntuacionesPushButton"
           ],
           [
             "HoverImage",
-            "TaharezLook/PuntuacionesButtonBg"
+            "TaharezLook/PuntuacionesHoverButton"
           ]
         ]
       }
