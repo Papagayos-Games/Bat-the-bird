@@ -24,6 +24,9 @@
         "Prefab" : "DefaultLight"
       },
       {
+        "Prefab": "GameManager"
+      },
+      {
         "Prefab": "Bird",
         "Components": [
           {
