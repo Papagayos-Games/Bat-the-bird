@@ -9,8 +9,8 @@ end
 
 gameManager["start"] = function(_self, lua)
     local ogreContext = lua:getOgreContext()
-    ogreContext:setSkyPlane("SkyPlaneMat", -70, 10,10,0.0)
-    ogreContext:changeMaterialScroll("SkyPlaneMat", -0.1, 0)
+    ogreContext:setSkyPlane("SkyPlaneMat2", -70, 10,10,0.0)
+    ogreContext:changeMaterialScroll("SkyPlaneMat2", -0.1, 0)
     _self.spawners = {}
     --local s = lua:getLuaSelf(lua:getEntity("coheteSpawner"), "spawner")
 

@@ -158,6 +158,20 @@ material SkyPlaneMat{
 	} 
 }
 
+material SkyPlaneMat2{
+	technique {
+		pass {
+			lighting off
+			texture_unit 
+			{ // Texture unit 0
+				texture SkyPlane2.jpg
+				colour_op modulate
+				tex_coord_set 0
+		    }
+		 }
+	} 
+}
+
 material IG2App/space {
     technique {
         pass{
