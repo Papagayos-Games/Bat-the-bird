@@ -17,6 +17,9 @@
       "Prefab": "ScoreBoardMenu/backButton"
     },
     {
+      "Prefab": "ScoreBoardMenu/scoresButton"
+    },
+    {
       "Name": "highScoresImage",
       "Components": [
         {

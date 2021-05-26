@@ -34,8 +34,10 @@
     <Image height="128" name="GameOver" width="530" xPos="1788" yPos="896" />
 
     <Image height="375" name="ScoreGameOver" width="512" xPos="0" yPos="1035" />
+    <Image height="128" name="ScoreButtonGameOver" width="256" xPos="1024" yPos="1024" />
 
     <Image height="375" name="HighScoresPanel" width="512" xPos="512" yPos="1050" />
+    <Image height="256" name="HighScoresButton" width="256" xPos="1280" yPos="1024" />
 
     <Image height="256" name="MouseBg" width="256" xPos="768" yPos="0" />
     <Image height="256" name="CreditsBg" width="512" xPos="0" yPos="256" />

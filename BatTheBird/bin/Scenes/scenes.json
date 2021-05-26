@@ -1,10 +1,10 @@
 {
   "SceneFiles": [
-    "batTheBird",
-    "mainMenu",
-    "info",
     "scoreboard",
     "gameOver",
+    "mainMenu",
+    "batTheBird",
+    "info",
     "credits"
   ]
 }
