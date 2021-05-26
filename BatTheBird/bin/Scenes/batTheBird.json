@@ -99,6 +99,22 @@
       ]
     },
     {
+      "Prefab" : "Burbuja",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [
+              -110,
+              50,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
       "Name": "coheteSpawner",
       "Components": [
         {
@@ -140,7 +156,7 @@
           "Component": "spawner",
           "Type": "LUA",
           "Parameters": {
-            "spawnObject": "Burbuja",
+            "spawnObject": "Cohete",
             "timeToSpawn": 1.0
           }
         }
@@ -164,7 +180,7 @@
           "Component": "spawner",
           "Type": "LUA",
           "Parameters": {
-            "spawnObject": "PelotaRebote",
+            "spawnObject": "Cohete",
             "timeToSpawn": 2.0
           }
         }

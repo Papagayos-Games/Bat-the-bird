@@ -66,7 +66,7 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
         if not _self.batted then
             _self.time = _self.time + deltaTime
             if _self.time < _self.botLimit and _self.time > _self.topLimit then
-                print("puedo batiar")
+                --print("puedo batiar")
             end
         elseif _self.time < 5 then
             _self.time = _self.time + deltaTime / 2

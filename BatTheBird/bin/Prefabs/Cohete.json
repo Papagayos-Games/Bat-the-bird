@@ -69,12 +69,8 @@
       "Component": "cohete",
       "Type": "LUA",
       "Parameters": {
-        "strength": 5.3
+        "strength": 25
       }
-    },
-    {
-      "Component": "destroyOnContact",
-      "Type": "LUA"
     },
     {
       "Component": "destroyAtPos",

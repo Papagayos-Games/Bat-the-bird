@@ -73,10 +73,6 @@
       }
     },
     {
-      "Component": "destroyOnContact",
-      "Type": "LUA"
-    },
-    {
       "Component": "destroyAtPos",
       "Type": "LUA"
     }
