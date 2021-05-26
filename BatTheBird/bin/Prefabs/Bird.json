@@ -69,6 +69,7 @@
       "Type": "LUA",
       "Parameters": {
         "strength": 50,
+        "xFactor" : 5.0,
         "sweetspot": 3.0
       }
     }

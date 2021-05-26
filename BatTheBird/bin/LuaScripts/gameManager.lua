@@ -7,24 +7,34 @@ gameManager["instantiate"] = function(params, entity)
 end
 
 gameManager["start"] = function(_self, lua)
+    -- Aplica otro skyplane y un scroll en x
     local ogreContext = lua:getOgreContext()
     ogreContext:setSkyPlane("SkyPlaneMat2", -70, 10,10,0.0)
     ogreContext:changeMaterialScroll("SkyPlaneMat2", -0.1, 0)
-    _self.spawners = {}
 
+    -- Tabla con los spawners para activarlos y desactivarlos tras el bateo
+    _self.spawners = {}
     table.insert(_self.spawners, lua:getLuaSelf(lua:getEntity("coheteSpawner"), "spawner"))
     table.insert(_self.spawners, lua:getLuaSelf(lua:getEntity("burbujaSpawner"), "spawner"))
     table.insert(_self.spawners, lua:getLuaSelf(lua:getEntity("reboteSpawner"), "spawner"))
+
+    -- Funcion que se llama desde el bateo para ajustar la velocidad en X 
+    -- segun la fuerza de bateo y comenzar a spawnear powerups
     _self.modSpawners = function (spawn, xSpeed)
+        -- print("Velocidad en X del bateo")
+        -- print(xSpeed)
         for key, value in pairs(_self.spawners) do -- actualcode
             value.modSpawning(spawn, xSpeed)
         end
     end
-end
 
--- Si el ave colisiona con el cohete recibe un impulso
-gameManager["onCollisionEnter"] = function(_self, lua, other)
-    lua:getCurrentScene():destroyEntity(_self.entity)
+    -- Funcion para aumentar la velocidad de los objetos
+    -- spawneados (para simular el impulso en x al pillar un cohete)
+    _self.modSpawnersSpeed = function (speed)
+        for key, value in pairs(_self.spawners) do -- actualcode
+            value.modSpeed(speed)
+        end
+    end
 end
 
 return gameManager

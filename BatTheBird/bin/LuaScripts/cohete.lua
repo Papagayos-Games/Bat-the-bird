@@ -18,6 +18,7 @@ cohete["onCollisionEnter"] = function(_self, lua, other)
     print("Cohete")
     if other:getName() == "Bird" then
         lua:getRigidbody(other):addForce1(Vector3(0, _self.strength, 0), Vector3(0, 0, 0), 1)
+        lua:getLuaSelf(lua:getEntity("gameManager"), "gameManager").modSpawnersSpeed(_self.strength)
         lua:getCurrentScene():destroyEntity(_self.entity)
     end
 end

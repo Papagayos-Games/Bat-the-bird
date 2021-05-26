@@ -175,7 +175,8 @@
           "Type": "LUA",
           "Parameters": {
             "spawnObject": "Cohete",
-            "timeToSpawn": 3.0
+            "timeToSpawn": 3.0,
+            "slowAcc": 3.1
           }
         }
       ]
@@ -199,7 +200,8 @@
           "Type": "LUA",
           "Parameters": {
             "spawnObject": "Burbuja",
-            "timeToSpawn": 1.0
+            "timeToSpawn": 1.0,
+            "slowAcc": 3.1
           }
         }
       ]
@@ -223,7 +225,8 @@
           "Type": "LUA",
           "Parameters": {
             "spawnObject": "PelotaRebote",
-            "timeToSpawn": 2.0
+            "timeToSpawn": 2.0,
+            "slowAcc": 3.1
           }
         }
       ]

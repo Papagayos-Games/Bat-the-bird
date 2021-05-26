@@ -47,13 +47,15 @@
           0.0,
           0.0
         ],
-        "restitution": 0.5,
+        "restitution": 1.0,
         "linealVel": [
           0.0,
           0.0,
           0.0
         ],
-        "friction": 0.1,
+        "dampingLin" : 0.05,
+        "dampingAng" : 0.1,
+        "friction": 0.001,
         "state": "Trigger",
         "shape": {
           "id": "Box",
