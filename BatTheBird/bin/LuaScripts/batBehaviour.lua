@@ -35,6 +35,10 @@ batBehaviour["instantiate"] = function(params, entity)
     -- Tiempo desde que cae el pajaro en el que la fuerza sera maxima
     self.sweetspot = 3.0
 
+    -- Contador de rebotes 
+    self.bounces = 0
+    self.maxBounces = 2
+
     -- Parametros personalizados desde json
     if p ~=nil then
         if p.strength ~= nil then
@@ -59,6 +63,19 @@ batBehaviour["instantiate"] = function(params, entity)
     self.topLimit = self.sweetspot - self.range
     self.botLimit = self.sweetspot + self.range
 
+
+    -- Resetea todos los valores y llama al gameManager pasandole 
+    -- la puntuacion de este intento
+    self.finTurno = function (lua)
+        -- self.rb:setLinearVelocity(Vector3(0, 0, 0))
+        -- self.rb:setPosition(Vector3(self.startPos.x, self.startPos.y, self.startPos.z))
+        -- self.time = 0;
+        -- self.batted = false
+        -- self.batTime = 0
+        -- self.passHighestStrenght = false;
+        lua:getLuaSelf(lua:getEntity("gameManager"), "gameManager").pasaTurno(lua) -- pasar puntuacion
+    end
+
     return self
 end
 
@@ -77,7 +94,7 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
         if not _self.batted and (_self.time < _self.botLimit and _self.time > _self.topLimit) then
 
             -- Se calcula y se aplica la fuerza en el pajaro y los objetos spawneados
-            local strength = _self.strength * (_self.batTime)
+            local strength = _self.strength * _self.batTime
             _self.rb:addForce1(Vector3(0, strength, 0), Vector3(0, 0, 0), 1)          
             lua:getLuaSelf(lua:getEntity("gameManager"), "gameManager").modSpawners(true, _self.xFactor * strength) --velocidad en x inicial de los spawners
             print(_self.strength)
@@ -119,21 +136,6 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
             _self.time = _self.time + deltaTime / 2
         end
     end
-
-    -- Para debuggear resetea la posicion si se hace click derecho
-    if input:mouseButtonPressed() == 2 then
-        _self.rb:setLinearVelocity(Vector3(0, 0, 0))
-        _self.rb:setPosition(Vector3(_self.startPos.x, _self.startPos.y,
-                                     _self.startPos.z))
-        _self.time = 0;
-        _self.batted = false
-        local cameraTransform = lua:getTransform(lua:getEntity("defaultCamera"))
-        cameraTransform:setPosition(Vector3(0, 80, 300))
-        local cameraFollow = lua:getLuaSelf(lua:getEntity("defaultCamera"),
-                                            "followTarget")
-        cameraFollow.setFollow(false)
-        lua:getLuaSelf(lua:getEntity("gameManager"), "gameManager").modSpawners(false, 0)
-    end
 end
 
 -- Si toca el suelo no puede batear mas y se cambiara el turno
@@ -142,6 +144,11 @@ batBehaviour["onCollisionEnter"] = function(_self, lua, other)
         if _self.escudo == true then
             lua:getRigidbody(other):addForce1(Vector3(0, _self.strength, 0), Vector3(0, 0, 0), 1)
             _self.escudo = false
+        end
+        
+        _self.bounces = _self.bounces + 1
+        if(_self.bounces >= _self.maxBounces) then
+            _self.finTurno(lua)    -- 
         end
         _self.batted = true
     end
