@@ -4,8 +4,14 @@
       "Component": "Button",
       "Type": "UI",
       "Parameters": {
-        "position": [ 0.415, 0.46 ],
-        "size": [ 320, 150 ],
+        "position": [
+          0.415,
+          0.46
+        ],
+        "size": [
+          320,
+          150
+        ],
         "name": "ScoreButton",
         "text": "",
         "type": "Button",
@@ -24,6 +30,10 @@
           ]
         ]
       }
+    },
+    {
+      "Component": "setScoreText",
+      "Type": "LUA"
     }
   ]
 }
