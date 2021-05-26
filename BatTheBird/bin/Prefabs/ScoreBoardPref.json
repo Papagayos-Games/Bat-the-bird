@@ -1,0 +1,12 @@
+{
+  "Name": "ScoreBoardPref",
+  "Components": [
+    {
+      "Component": "score",
+      "Type": "LUA",
+      "Parameters": {
+        "maxScores": 3
+      }
+    }
+  ]
+}

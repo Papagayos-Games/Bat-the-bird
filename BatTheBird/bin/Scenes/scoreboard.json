@@ -8,16 +8,23 @@
           "Component": "Transform",
           "Type": "Common",
           "Parameters": {
-            "position": [ 0, 0, 500 ]
+            "position": [
+              0,
+              0,
+              500
+            ]
           }
         }
       ]
     },
     {
-      "Prefab": "ScoreBoardMenu/backButton"
+      "Prefab": "ScoreBoardPref"
     },
     {
       "Prefab": "ScoreBoardMenu/scoresButton"
+    },
+    {
+      "Prefab": "ScoreBoardMenu/backButton"
     },
     {
       "Name": "highScoresImage",
@@ -26,8 +33,14 @@
           "Component": "Image",
           "Type": "UI",
           "Parameters": {
-            "position": [ 0.3, 0.2 ],
-            "size": [ 640, 540 ],
+            "position": [
+              0.3,
+              0.2
+            ],
+            "size": [
+              640,
+              540
+            ],
             "name": "HighScoresImage",
             "type": "StaticImage",
             "property": [
