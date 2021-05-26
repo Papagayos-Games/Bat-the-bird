@@ -3,7 +3,6 @@ local gameManager = {}
 gameManager["instantiate"] = function(params, entity)
     local self = {}
     self.entity = entity
-
     return self
 end
 
@@ -12,17 +11,14 @@ gameManager["start"] = function(_self, lua)
     ogreContext:setSkyPlane("SkyPlaneMat2", -70, 10,10,0.0)
     ogreContext:changeMaterialScroll("SkyPlaneMat2", -0.1, 0)
     _self.spawners = {}
-    --local s = lua:getLuaSelf(lua:getEntity("coheteSpawner"), "spawner")
 
     table.insert(_self.spawners, lua:getLuaSelf(lua:getEntity("coheteSpawner"), "spawner"))
     table.insert(_self.spawners, lua:getLuaSelf(lua:getEntity("burbujaSpawner"), "spawner"))
     table.insert(_self.spawners, lua:getLuaSelf(lua:getEntity("reboteSpawner"), "spawner"))
-    _self.modSpawning = function (spawn)
-        print("spawn")
+    _self.modSpawners = function (spawn, xSpeed)
         for key, value in pairs(_self.spawners) do -- actualcode
-            value.modSpawning(true)
+            value.modSpawning(spawn, xSpeed)
         end
-        print("funciona")
     end
 end
 

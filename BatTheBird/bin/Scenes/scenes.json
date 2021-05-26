@@ -1,9 +1,9 @@
 {
   "SceneFiles": [
-    "scoreboard",
-    "gameOver",
     "mainMenu",
     "batTheBird",
+    "scoreboard",
+    "gameOver",
     "info",
     "credits"
   ]

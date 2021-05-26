@@ -3,7 +3,7 @@ local destroyAtPos = {}
 destroyAtPos["instantiate"] = function(params, entity)
     local self = {}
     self.entity = entity
-    self.limitX = -200
+    self.limitX = -220
     if p.limitX ~= nil then
         self.limitX = p.limitX
     end
@@ -12,11 +12,14 @@ end
 
 destroyAtPos["start"] = function(_self, lua)
    --_self.limitX = (lua:getOgreContext():getWindowWidth()/2)
+   _self.position = lua:getTransform(_self.entity):getPosition()
 end
 
--- Si el ave colisiona con el cohete recibe un impulso
-destroyAtPos["onCollisionEnter"] = function(_self, lua, other)
-    lua:getCurrentScene():destroyEntity(_self.entity)
+-- Si llega a la posicion en limitX se destruye
+destroyAtPos["update"] = function(_self, lua, deltaTime)
+    if _self.position.x < _self.limitX then
+        lua:getCurrentScene():destroyEntity(_self.entity)
+    end
 end
 
 return destroyAtPos

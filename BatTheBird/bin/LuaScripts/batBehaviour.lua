@@ -13,16 +13,21 @@ batBehaviour["instantiate"] = function(params, entity)
     self.prevTime = 0
     self.batted = false
     self.escudo = false
-    self.strength = p.strength
-    self.sweetspot = p.sweetspot
+    self.strength = 20.0
+    self.sweetspot = 3.0
     if(p ~=nil) then
         if(p.strength ~= nil) then
             self.strength = p.strength
         end
         if(p.sweetspot ~= nil) then
-            self.sweetspot = 3.0
+            self.sweetspot = p.sweetspot
         end
     end
+    -- margen de tiempo de 2 segundos para batear
+    -- 
+    self.topLimit = self.sweetspot - 1.0
+    self.botLimit = self.sweetspot + 1.0
+
     return self
 end
 
@@ -38,7 +43,7 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
     local input = lua:getInputManager()
 
     if input:mouseButtonPressed() == 1 then
-        if not _self.batted then
+        if not _self.batted and (_self.time < _self.botLimit and _self.time > _self.topLimit) then
             local strength = _self.strength *
                                  (_self.sweetspot -
                                      (math.abs(_self.sweetspot - _self.time)))
@@ -47,9 +52,9 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
                                                 "followTarget")
             cameraFollow.setFollow(true)
             _self.batted = true
-            _self.time = 0
-            lua:getLuaSelf(lua:getEntity("gameManager"), "gameManager"):modSpawning(true)
-            print("funca")
+            _self.time =  0
+            print(_self.strength)
+            lua:getLuaSelf(lua:getEntity("gameManager"), "gameManager").modSpawners(true, 15 * strength) --velocidad en x inicial de los spawners
         else
             if _self.time > 0 then
                 _self.rb:addForce1(Vector3(0, _self.strength, 0),
@@ -60,6 +65,9 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
     else
         if not _self.batted then
             _self.time = _self.time + deltaTime
+            if _self.time < _self.botLimit and _self.time > _self.topLimit then
+                print("puedo batiar")
+            end
         elseif _self.time < 5 then
             _self.time = _self.time + deltaTime / 2
         end
@@ -76,6 +84,7 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
         local cameraFollow = lua:getLuaSelf(lua:getEntity("defaultCamera"),
                                             "followTarget")
         cameraFollow.setFollow(false)
+        lua:getLuaSelf(lua:getEntity("gameManager"), "gameManager").modSpawners(false, 0)
     end
 end
 

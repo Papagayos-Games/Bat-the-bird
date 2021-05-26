@@ -5,23 +5,17 @@ local function createfunc(_self, lua, object)
     local rndY = math.random() +
                      math.random(math.floor(_self.birdPos.y - _self.spawnRange) + 1,
                          math.floor(_self.birdPos.y + _self.spawnRange) - 1)
-    lua:getRigidbody(object):setPosition(Vector3(200, rndY, 0.0))
+    lua:getRigidbody(object):setPosition(Vector3(150, rndY, 0.0))  
     lua:getRigidbody(object):setLinearVelocity(Vector3(-_self.xSpeed, 0, 0))
-    print("Objeto spawneado")
 end
 
 spawner["instantiate"] = function(params, entity)
     p = JSON:decode(params)
-
-    -- Cosas para random -- 
-    -- math.randomseed(os.time())
-    -- math.random(); math.random(); math.random()
-
     local self = {}
     self.entity = entity
     self.spawnObject = "Cohete"
     self.timeToSpawn = 1.5
-    self.xSpeed = 500
+    self.xSpeed = 500 
     self.spawnRange = 100
     self.slowAcc = 9.8
     self.previousTime = self.timeToSpawn
@@ -37,7 +31,6 @@ spawner["instantiate"] = function(params, entity)
         -- Cada cuantos segundos spawnea
         if p.timeToSpawn ~= nil then
             self.timeToSpawn = p.timeToSpawn
-            print(self.timeToSpawn)
         end
 
         -- Velocidad en x inicial del golpeo
@@ -57,9 +50,9 @@ spawner["instantiate"] = function(params, entity)
         self.time = time
     end
 
-    self.modSpawning = function (s)
+    self.modSpawning = function (s, xSpeed)
         self.spawning = s
-        print(s)
+        self.xSpeed = xSpeed
     end
     return self
 end
@@ -83,9 +76,8 @@ spawner["update"] = function(_self, lua, deltaTime)
             _self.xSpeed = _self.xSpeed - _self.slowAcc * deltaTime
         end
 
-        print(_self.xSpeed)
-        if (lua:getInputManager():getTicks() - _self.timeSinceSpawn) / 1000 >= _self.timeToSpawn then
-            print(_self.spawnObject)
+        if (_self.xSpeed > 225) and (lua:getInputManager():getTicks() - _self.timeSinceSpawn) / 1000 >= _self.timeToSpawn then
+            --print(_self.spawnObject)
             local objectSpawned = lua:instantiate(_self.spawnObject)
             objectSpawned:start()
             createfunc(_self, lua, objectSpawned)
