@@ -71,6 +71,13 @@ copy ..\dependencies\Papagayo-Engine\Engine\bin\zlib.dll ..\bin
 copy ..\dependencies\Papagayo-Engine\Engine\bin\fmod.dll ..\bin
 
 echo ---------------------------------------------------
+echo Moviendo archivos necesarios para generar el instalador
+echo ---------------------------------------------------
+
+copy ..\dependencies\Papagayo-Engine\Engine\dependencies\cegui\build\bin\CEGUICoreWindowRendererSet.dll ..\bin
+copy ..\dependencies\Papagayo-Engine\Engine\dependencies\cegui\build\bin\CEGUIExpatParser.dll ..\bin
+
+echo ---------------------------------------------------
 echo FIN
 echo ---------------------------------------------------
 
