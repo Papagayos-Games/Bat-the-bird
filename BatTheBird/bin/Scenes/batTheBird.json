@@ -1,76 +1,195 @@
 {
-    "Entities": [
-      {
-        "Name": "defaultCamera",
-        "Prefab" : "DefaultCamera",
-        "Components" : [
-          {
-            "Component": "Transform",
-            "Type": "Common",
-            "Parameters" : {
-              "position" : [0,80,300]
-            }
-          },
-          {
-            "Component": "followTarget",
-            "Type": "LUA",
-            "Parameters" : {
-              "following" : false
+  "Entities": [
+    {
+      "Name": "defaultCamera",
+      "Prefab": "DefaultCamera",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [
+              0,
+              80,
+              300
+            ]
+          }
+        },
+        {
+          "Component": "followTarget",
+          "Type": "LUA",
+          "Parameters": {
+            "following": false
+          }
+        }
+      ]
+    },
+    {
+      "Prefab": "DefaultLight",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [
+              0,
+              50,
+              -100
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Prefab": "Bird",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [
+              -110,
+              150,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Name": "floor",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "dimensions": [
+              3.5,
+              0.5,
+              1
+            ]
+          }
+        },
+        {
+          "Component": "MeshComponent",
+          "Type": "Render",
+          "Parameters": {
+            "meshName": "cube",
+            "meshMaterial": "Practica1_Azulejo"
+          }
+        },
+        {
+          "Component": "RigidBody",
+          "Type": "Physics",
+          "Parameters": {
+            "group": 4,
+            "mask": 1,
+            "restitution": 1.0,
+            "state": "Kinematic",
+            "shape": {
+              "id": "Box"
             }
           }
-        ]
-      },
-      {
-        "Prefab" : "DefaultLight"
-      },
-      {
-        "Prefab": "GameManager"
-      },
-      {
-        "Prefab": "Bird",
-        "Components": [
-          {
-            "Component": "Transform",
-            "Type": "Common",
-            "Parameters": {
-              "position":[-110, 150, 0]
-            }
+        }
+      ]
+    },
+    {
+      "Name": "coheteSpawner",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [
+              0,
+              0,
+              0
+            ]
           }
-        ]
-      },
-      {
-        "Name": "floor",
-        "Components": [
-          {
-            "Component": "Transform",
-            "Type": "Common",
-            "Parameters": {
-              "position":[0, 0, 0],
-              "dimensions": [ 3.5, 0.5, 1 ]
-            }
-          },
-          {
-            "Component": "MeshComponent",
-            "Type": "Render",
-            "Parameters": {
-              "meshName": "cube",
-              "meshMaterial": "Practica1_Azulejo"
-            }
-          },
-          {
-            "Component": "RigidBody",
-            "Type": "Physics",
-            "Parameters": {
-              "group": 64,
-              "mask": 128,
-              "restitution": 1.0,
-              "state": "Kinematic",
-              "shape": {
-                "id": "Box"
-              }
-            }
+        },
+        {
+          "Component": "spawner",
+          "Type": "LUA",
+          "Parameters": {
+            "spawnObject": "Cohete",
+            "timeToSpawn": 0.3
           }
-        ]
-      }
-    ]
+        }
+      ]
+    },
+    {
+      "Name": "burbujaSpawner",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "Component": "spawner",
+          "Type": "LUA",
+          "Parameters": {
+            "spawnObject": "Burbuja",
+            "timeToSpawn": 1
+          }
+        }
+      ]
+    },
+    {
+      "Name": "reboteSpawner",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "Component": "spawner",
+          "Type": "LUA",
+          "Parameters": {
+            "spawnObject": "PelotaRebote",
+            "timeToSpawn": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "Name": "gameManager",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "Name" : "gameManager",
+          "Component": "gameManager",
+          "Type": "LUA"
+        }
+      ]
+    }
+  ]
 }

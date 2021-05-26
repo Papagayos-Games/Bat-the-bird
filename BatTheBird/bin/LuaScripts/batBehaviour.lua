@@ -9,12 +9,20 @@ batBehaviour["instantiate"] = function(params, entity)
     self.transform = nil
     self.rb = nil
     self.startPos = nil
-    self.strength = p.strength
     self.time = 0
     self.prevTime = 0
-    self.sweetspot = p.sweetspot
     self.batted = false
     self.escudo = false
+    self.strength = p.strength
+    self.sweetspot = p.sweetspot
+    if(p ~=nil) then
+        if(p.strength ~= nil) then
+            self.strength = p.strength
+        end
+        if(p.sweetspot ~= nil) then
+            self.sweetspot = 3.0
+        end
+    end
     return self
 end
 
@@ -29,9 +37,6 @@ end
 batBehaviour["update"] = function(_self, lua, deltaTime)
     local input = lua:getInputManager()
 
-    print(_self.time)
-    print(_self.transform:getPosition().y)
-
     if input:mouseButtonPressed() == 1 then
         if not _self.batted then
             local strength = _self.strength *
@@ -43,12 +48,13 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
             cameraFollow.setFollow(true)
             _self.batted = true
             _self.time = 0
+            lua:getLuaSelf(lua:getEntity("gameManager"), "gameManager"):modSpawning(true)
+            print("funca")
         else
             if _self.time > 0 then
                 _self.rb:addForce1(Vector3(0, _self.strength, 0),
                                    Vector3(0, 0, 0), 0)
                 _self.time = _self.time - deltaTime
-                print("potencia")
             end
         end
     else

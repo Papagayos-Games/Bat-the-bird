@@ -195,7 +195,45 @@ material IG2App/reflejo{
 
 //////////////////////////////////////////////////////////////////////////
 
+material color_Azul {
+	technique { // first, preferred technique
+		pass { // first pass
+			diffuse 0.02 0.13 0.77 1.00
+			ambient 0.1 0.2 0.3
+			specular 0.8 0.8 0.8 68
+		}
+	}
+}
 
+material color_Amarillo {
+	technique { // first, preferred technique
+		pass { // first pass
+			diffuse 0.99 1.0 0.43
+			ambient 0.1 0.2 0.3
+			specular 0.8 0.8 0.8 68
+		}
+	}
+}
+
+material color_Rojo {
+	technique { // first, preferred technique
+		pass { // first pass
+			diffuse 0.91 0.05 0.02 1.00
+			ambient 0.1 0.2 0.3
+			specular 0.8 0.8 0.8 68
+		}
+	}
+}
+
+material color_Verde {
+	technique { // first, preferred technique
+		pass { // first pass
+			diffuse 0.16 1.00 0.49 1.00
+			ambient 0.1 0.2 0.3
+			specular 0.8 0.8 0.8 68
+		}
+	}
+}
 
 material Practica1_Rojo {
 	technique { // first, preferred technique

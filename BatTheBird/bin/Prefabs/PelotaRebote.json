@@ -32,7 +32,7 @@
       "Type": "Render",
       "Parameters": {
         "meshName": "cube",
-        "meshMaterial": "color_Rojo"
+        "meshMaterial": "color_Amarillo"
       }
     },
     {
@@ -66,10 +66,10 @@
       }
     },
     {
-      "Component": "cohete",
+      "Component": "pelotaRebote",
       "Type": "LUA",
       "Parameters": {
-        "strength": 5.3
+        "friction": 1.02
       }
     },
     {

@@ -32,7 +32,7 @@
       "Type": "Render",
       "Parameters": {
         "meshName": "cube",
-        "meshMaterial": "color_Rojo"
+        "meshMaterial": "color_Azul"
       }
     },
     {
@@ -66,10 +66,10 @@
       }
     },
     {
-      "Component": "cohete",
+      "Component": "burbuja",
       "Type": "LUA",
       "Parameters": {
-        "strength": 5.3
+        "friction": 1.02
       }
     },
     {

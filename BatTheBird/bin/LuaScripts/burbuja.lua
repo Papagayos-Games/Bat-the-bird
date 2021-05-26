@@ -17,7 +17,7 @@ end
 -- Si el ave colisiona con el cohete recibe un impulso
 burbuja["onCollisionEnter"] = function(_self, lua, other)
     if other:getName() == "Bird" then
-        lua:getRigidbody(other):setFriction(1.28)
+        lua:getRigidbody(other):setFriction(_self.friction)
     end
 end
 

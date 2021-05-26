@@ -31,7 +31,8 @@
       "Component": "MeshComponent",
       "Type": "Render",
       "Parameters": {
-        "meshName": "penguin"
+        "meshName": "penguin",
+        "meshMaterial": "color_Azul"
       }
     },
     {
@@ -40,8 +41,8 @@
       "Parameters": {
         "dampingLin": 0.05,
         "dampingAng": 0,
-        "group": 128,
-        "mask": 64,
+        "group": 1,
+        "mask": 6,
         "mass": 0.28,
         "mShape": false,
         "gravity": [

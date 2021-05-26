@@ -15,9 +15,9 @@
       "Type": "Render",
       "Parameters": {
         "lightName": "luz",
-        "lightType": 1,
-        "lightDirection": [ 0.0, 0.0, 1.0 ],
-        "diffuseColour": [ 1.0, 0.0, 0.0 ],
+        "lightType": 2,
+        "lightDirection": [ 0.0, 0.0, -1.0 ],
+        "diffuseColour": [ 1.0, 1.0, 1.0 ],
         "lightPower": 1.0,
         "visible": true,
         "castShadow": true
