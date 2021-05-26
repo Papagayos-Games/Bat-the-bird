@@ -68,7 +68,7 @@
       "Component": "batBehaviour",
       "Type": "LUA",
       "Parameters": {
-        "strength": 10,
+        "strength": 50,
         "sweetspot": 3.0
       }
     }

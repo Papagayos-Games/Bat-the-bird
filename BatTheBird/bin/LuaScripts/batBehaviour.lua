@@ -15,6 +15,7 @@ batBehaviour["instantiate"] = function(params, entity)
     self.escudo = false
     self.strength = 20.0
     self.sweetspot = 3.0
+    self.batTime = 0
     if p ~=nil then
         if p.strength ~= nil then
             self.strength = p.strength
@@ -25,8 +26,10 @@ batBehaviour["instantiate"] = function(params, entity)
     end
     -- margen de tiempo de 2 segundos para batear
     -- 
-    self.topLimit = self.sweetspot - 1.0
-    self.botLimit = self.sweetspot + 1.0
+    self.range = 1.0
+    self.passHighestStrenght = false;
+    self.topLimit = self.sweetspot - self.range
+    self.botLimit = self.sweetspot + self.range
 
     return self
 end
@@ -44,9 +47,7 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
 
     if input:mouseButtonPressed() == 1 then
         if not _self.batted and (_self.time < _self.botLimit and _self.time > _self.topLimit) then
-            local strength = _self.strength *
-                                 (_self.sweetspot -
-                                     (math.abs(_self.sweetspot - _self.time)))
+            local strength = _self.strength * (_self.batTime)
             _self.rb:addForce1(Vector3(0, strength, 0), Vector3(0, 0, 0), 1)
             local cameraFollow = lua:getLuaSelf(lua:getEntity("defaultCamera"),
                                                 "followTarget")
@@ -66,7 +67,14 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
         if not _self.batted then
             _self.time = _self.time + deltaTime
             if _self.time < _self.botLimit and _self.time > _self.topLimit then
-                --print("puedo batiar")
+                
+                if _self.passHighestStrenght then
+                    _self.batTime =  _self.batTime - deltaTime
+                else
+                    _self.batTime =  _self.batTime + deltaTime
+                    _self.passHighestStrenght = _self.batTime >= _self.range  
+                end
+            
             end
         elseif _self.time < 5 then
             _self.time = _self.time + deltaTime / 2

@@ -32,7 +32,7 @@
           "Type": "UI",
           "Parameters": {
             "position": [
-              0.3,
+              0.05,
               0.2
             ],
             "size": [
@@ -198,7 +198,7 @@
           "Component": "spawner",
           "Type": "LUA",
           "Parameters": {
-            "spawnObject": "Cohete",
+            "spawnObject": "Burbuja",
             "timeToSpawn": 1.0
           }
         }
@@ -222,7 +222,7 @@
           "Component": "spawner",
           "Type": "LUA",
           "Parameters": {
-            "spawnObject": "Cohete",
+            "spawnObject": "PelotaRebote",
             "timeToSpawn": 2.0
           }
         }
