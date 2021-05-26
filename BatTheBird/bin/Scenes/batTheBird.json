@@ -25,6 +25,48 @@
       ]
     },
     {
+      "Name": "barraPotenciadoraImage",
+      "Components": [
+        {
+          "Component": "Image",
+          "Type": "UI",
+          "Parameters": {
+            "position": [
+              0.3,
+              0.2
+            ],
+            "size": [
+              100,
+              400
+            ],
+            "name": "BarraPotenciadoraImage",
+            "type": "StaticImage",
+            "property": [
+              [
+                "Image",
+                "TaharezLook/BarraBateo100"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
+          }
+        },
+        {
+          "Component": "barraBateo",
+          "Type": "LUA",
+          "Parameters": {
+            
+          }
+        }
+      ]
+    },
+    {
       "Prefab": "DefaultLight",
       "Components": [
         {

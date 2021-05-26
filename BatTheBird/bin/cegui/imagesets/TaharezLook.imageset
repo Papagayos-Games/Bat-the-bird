@@ -39,6 +39,18 @@
     <Image height="375" name="HighScoresPanel" width="512" xPos="512" yPos="1050" />
     <Image height="256" name="HighScoresButton" width="256" xPos="1280" yPos="1024" />
 
+    <Image height="256" name="BarraBateo100" width="128" xPos="1536" yPos="1024" />
+    <Image height="256" name="BarraBateo75" width="128" xPos="1664" yPos="1024" />
+    <Image height="256" name="BarraBateo50" width="128" xPos="1792" yPos="1024" />
+    <Image height="256" name="BarraBateo25" width="128" xPos="1920" yPos="1024" />
+    <Image height="256" name="BarraBateo0" width="128" xPos="2048" yPos="1024" />
+
+    <Image height="256" name="BarraHueso100" width="128" xPos="2176" yPos="1024" />
+    <Image height="256" name="BarraHueso75" width="128" xPos="2304" yPos="1024" />
+    <Image height="256" name="BarraHueso50" width="128" xPos="2432" yPos="1024" />
+    <Image height="256" name="BarraHueso25" width="128" xPos="2304" yPos="768" />
+    <Image height="256" name="BarraHueso0" width="128" xPos="2432" yPos="768" />
+
     <Image height="256" name="MouseBg" width="256" xPos="768" yPos="0" />
     <Image height="256" name="CreditsBg" width="512" xPos="0" yPos="256" />
     <Image height="500" name="InfoBg" width="1024" xPos="0" yPos="524" />

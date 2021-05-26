@@ -15,11 +15,11 @@ batBehaviour["instantiate"] = function(params, entity)
     self.escudo = false
     self.strength = 20.0
     self.sweetspot = 3.0
-    if(p ~=nil) then
-        if(p.strength ~= nil) then
+    if p ~=nil then
+        if p.strength ~= nil then
             self.strength = p.strength
         end
-        if(p.sweetspot ~= nil) then
+        if p.sweetspot ~= nil then
             self.sweetspot = p.sweetspot
         end
     end
@@ -73,7 +73,7 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
         end
     end
     -- Para debuggear resetea la posicion si se hace click derecho
-    if (input:mouseButtonPressed() == 2) then
+    if input:mouseButtonPressed() == 2 then
         _self.rb:setLinearVelocity(Vector3(0, 0, 0))
         _self.rb:setPosition(Vector3(_self.startPos.x, _self.startPos.y,
                                      _self.startPos.z))
