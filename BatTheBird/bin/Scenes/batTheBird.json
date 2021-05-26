@@ -25,6 +25,45 @@
       ]
     },
     {
+      "Prefab":  "InGame/scoreButton"
+    },
+    {
+      "Components": [
+        {
+          "Component": "Button",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.88, 0.08 ],
+            "size": [ 60, 60 ],
+            "name": "ExitGameButton",
+            "text": "",
+            "type": "Button",
+            "property": [
+              [
+                "NormalImage",
+                "TaharezLook/SalirInGameNormalButton"
+              ],
+              [
+                "PushedImage",
+                "TaharezLook/SalirInGamePushButton"
+              ],
+              [
+                "HoverImage",
+                "TaharezLook/SalirInGameHoverButton"
+              ]
+            ]
+          }
+        },
+        {
+          "Component": "CloseGame",
+          "Type": "LUA",
+          "Parameters": {
+
+          }
+        }
+      ]
+    },
+    {
       "Name": "barraPotenciadoraImage",
       "Components": [
         {
