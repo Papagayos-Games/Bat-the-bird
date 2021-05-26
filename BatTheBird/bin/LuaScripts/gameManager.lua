@@ -7,10 +7,10 @@ gameManager["instantiate"] = function(params, entity)
 end
 
 gameManager["start"] = function(_self, lua)
-    -- Aplica otro skyplane y un scroll en x
+    -- Aplica otro skyplane
     local ogreContext = lua:getOgreContext()
     ogreContext:setSkyPlane("SkyPlaneMat2", -70, 10,10,0.0)
-    ogreContext:changeMaterialScroll("SkyPlaneMat2", -0.1, 0)
+  
 
     -- Tabla con los spawners para activarlos y desactivarlos tras el bateo
     _self.spawners = {}

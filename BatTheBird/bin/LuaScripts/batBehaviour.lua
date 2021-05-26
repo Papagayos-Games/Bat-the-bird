@@ -86,6 +86,9 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
             local cameraFollow = lua:getLuaSelf(lua:getEntity("defaultCamera"), "followTarget")
             cameraFollow.setFollow(true)
 
+            --Añadimos scroll a la textura del skyplane para simular desplazamiento en z
+            lua:getOgreContext():changeMaterialScroll("SkyPlaneMat2", -0.1, 0)
+
             _self.batted = true
             _self.time =  0
 
