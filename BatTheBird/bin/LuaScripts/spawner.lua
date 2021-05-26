@@ -80,6 +80,7 @@ spawner["instantiate"] = function(params, entity)
     self.modSpeed = function(speed)
         self.xSpeed =  self.xSpeed + speed
     end
+
     return self
 end
 
