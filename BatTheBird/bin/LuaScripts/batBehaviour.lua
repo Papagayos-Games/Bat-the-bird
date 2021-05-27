@@ -44,6 +44,8 @@ batBehaviour["instantiate"] = function(params, entity)
 
     -- Segundos en los que se recargara el hueso
     self.boneRecharge = 5.0
+
+    -- Para impedir el hueso antes de batear
     self.allowBone = false
 
     -- Parametros personalizados desde json
