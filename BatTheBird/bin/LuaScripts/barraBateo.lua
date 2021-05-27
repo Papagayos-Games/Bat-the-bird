@@ -18,7 +18,7 @@ end
 
 barraBateo["update"] = function(_self, lua, deltaTime)
 
-    if not _self.batBehaviour.batted then
+    if _self.batBehaviour.batted == _self.showWhenBatted then
         -- Si el pájaro aun está a rango de ser bateado
         if _self.batBehaviour.time < _self.batBehaviour.botLimit and
             _self.batBehaviour.time > _self.batBehaviour.topLimit then
