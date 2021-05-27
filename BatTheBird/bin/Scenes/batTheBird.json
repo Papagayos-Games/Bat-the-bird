@@ -141,22 +141,6 @@
       ]
     },
     {
-      "Prefab" : "Burbuja",
-      "Components": [
-        {
-          "Component": "Transform",
-          "Type": "Common",
-          "Parameters": {
-            "position": [
-              -110,
-              50,
-              0
-            ]
-          }
-        }
-      ]
-    },
-    {
       "Name": "coheteSpawner",
       "Components": [
         {
@@ -199,7 +183,7 @@
           "Component": "spawner",
           "Type": "LUA",
           "Parameters": {
-            "spawnObject": "Burbuja",
+            "spawnObject": "Ventilador",
             "timeToSpawn": 1.0,
             "slowAcc": 3.1
           }

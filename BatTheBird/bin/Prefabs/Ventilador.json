@@ -68,7 +68,7 @@
       }
     },
     {
-      "Component": "burbuja",
+      "Component": "ventilador",
       "Type": "LUA",
       "Parameters": {
         "friction": 1.02
