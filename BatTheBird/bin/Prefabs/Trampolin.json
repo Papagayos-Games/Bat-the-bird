@@ -16,9 +16,9 @@
           0
         ],
         "dimensions": [
-          0.2,
-          0.2,
-          0.2
+          25,
+          1,
+          25
         ],
         "rotation": [
           0,
@@ -31,8 +31,8 @@
       "Component": "MeshComponent",
       "Type": "Render",
       "Parameters": {
-        "meshName": "cube",
-        "meshMaterial": "color_Verde"
+        "meshName": "trampolin",
+        "meshMaterial": "trampolin_MAT"
       }
     },
     {
@@ -40,6 +40,8 @@
       "Type": "Physics",
       "Parameters": {
         "mShape": false,
+        "group" : 2,
+        "mask" : 1,
         "gravity": [
           0.0,
           0.0,
@@ -51,24 +53,27 @@
           0.0,
           0.0
         ],
-        "friction": 0.1,
+        "dampingLin" : 0.05,
+        "dampingAng" : 0.1,
+        "friction": 0.001,
         "state": "Trigger",
         "shape": {
           "id": "Box",
           "size": [
+            25.0,
             10.0,
-            10.0,
-            10.0
+            25.0
           ]
         }
       }
     },
     {
-      "Component": "burbuja",
-      "Type": "LUA",
-      "Parameters": {
-        "strength": 3.2
-      }
+      "Component": "trampolin",
+      "Type": "LUA"
+    },
+    {
+      "Component": "destroyAtPos",
+      "Type": "LUA"
     }
   ]
 }

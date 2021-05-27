@@ -16,9 +16,9 @@
           0
         ],
         "dimensions": [
-          0.2,
-          0.2,
-          0.2
+          60,
+          60,
+          60
         ],
         "rotation": [
           0,
@@ -31,8 +31,8 @@
       "Component": "MeshComponent",
       "Type": "Render",
       "Parameters": {
-        "meshName": "cube",
-        "meshMaterial": "color_Amarillo"
+        "meshName": "pelota",
+        "meshMaterial": "pelota_MAT"
       }
     },
     {
@@ -58,21 +58,14 @@
         "friction": 0.001,
         "state": "Trigger",
         "shape": {
-          "id": "Box",
-          "size": [
-            10.0,
-            10.0,
-            10.0
-          ]
+          "id": "Sphere",
+          "radius": 13
         }
       }
     },
     {
       "Component": "pelotaRebote",
-      "Type": "LUA",
-      "Parameters": {
-        "friction": 1.02
-      }
+      "Type": "LUA"
     },
     {
       "Component": "destroyAtPos",

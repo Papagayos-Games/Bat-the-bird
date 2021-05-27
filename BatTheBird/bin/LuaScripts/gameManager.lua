@@ -31,12 +31,16 @@ gameManager["start"] = function(_self, lua)
     local ogreContext = lua:getOgreContext()
     ogreContext:setSkyPlane("SkyPlaneMat2", -70, 10,10,0.0)
     lua:getOgreContext():changeMaterialScroll("SkyPlaneMat2", 0, 0)
+    lua:getOgreContext():changeMaterialScroll("cesped_MAT", 0, 0)
 
     -- Tabla con los spawners para activarlos y desactivarlos tras el bateo
     _self.spawners = {}
     table.insert(_self.spawners, lua:getLuaSelf(lua:getEntity("coheteSpawner"), "spawner"))
     table.insert(_self.spawners, lua:getLuaSelf(lua:getEntity("burbujaSpawner"), "spawner"))
     table.insert(_self.spawners, lua:getLuaSelf(lua:getEntity("reboteSpawner"), "spawner"))
+    table.insert(_self.spawners, lua:getLuaSelf(lua:getEntity("trampolinSpawner"), "trampolinSpawner"))
+
+
 
     -- Funcion que se llama desde el bateo para ajustar la velocidad en X 
     -- segun la fuerza de bateo y comenzar a spawnear powerups

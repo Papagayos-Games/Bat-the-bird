@@ -31,8 +31,8 @@
       "Component": "MeshComponent",
       "Type": "Render",
       "Parameters": {
-        "meshName": "cube",
-        "meshMaterial": "color_Rojo"
+        "meshName": "cohete",
+        "meshMaterial": "cohete_MAT"
       }
     },
     {
@@ -61,7 +61,7 @@
           "id": "Box",
           "size": [
             10.0,
-            10.0,
+            12.0,
             10.0
           ]
         }

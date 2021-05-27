@@ -31,8 +31,8 @@
       "Component": "MeshComponent",
       "Type": "Render",
       "Parameters": {
-        "meshName": "cube",
-        "meshMaterial": "color_Azul"
+        "meshName": "ventilador",
+        "meshMaterial": "ventilador_MAT"
       }
     },
     {

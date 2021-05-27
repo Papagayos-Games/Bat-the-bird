@@ -97,7 +97,6 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
             local strength = _self.strength * _self.batTime
             _self.rb:addForce1(Vector3(0, strength, 0), Vector3(0, 0, 0), 1)          
             lua:getLuaSelf(lua:getEntity("gameManager"), "gameManager").modSpawners(true, _self.xFactor * strength) --velocidad en x inicial de los spawners
-            print(_self.strength)
             
             -- La camara pasa a seguir al pajaro
             local cameraFollow = lua:getLuaSelf(lua:getEntity("defaultCamera"), "followTarget")
@@ -105,6 +104,7 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
 
             --Añadimos scroll a la textura del skyplane para simular desplazamiento en z
             lua:getOgreContext():changeMaterialScroll("SkyPlaneMat2", -0.1, 0)
+            lua:getOgreContext():changeMaterialScroll("cesped_MAT", -0.1, 0)
 
             _self.batted = true
             _self.time =  0

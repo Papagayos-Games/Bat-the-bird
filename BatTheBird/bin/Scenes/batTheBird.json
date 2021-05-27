@@ -10,7 +10,7 @@
           "Parameters": {
             "position": [
               0,
-              80,
+              150,
               300
             ]
           }
@@ -130,7 +130,7 @@
           "Parameters": {
             "position": [
               -110,
-              150,
+              220,
               0
             ]
           }
@@ -150,8 +150,8 @@
               0
             ],
             "dimensions": [
-              3.5,
-              0.5,
+              4,
+              2,
               1
             ]
           }
@@ -161,7 +161,7 @@
           "Type": "Render",
           "Parameters": {
             "meshName": "cube",
-            "meshMaterial": "Practica1_Azulejo"
+            "meshMaterial": "cesped_MAT"
           }
         },
         {
@@ -251,6 +251,26 @@
             "timeToSpawn": 2.0,
             "slowAcc": 3.1
           }
+        }
+      ]
+    },
+    {
+      "Name": "trampolinSpawner",
+      "Components":[
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "Component": "trampolinSpawner",
+          "Type": "LUA"
         }
       ]
     },
