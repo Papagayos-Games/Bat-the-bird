@@ -19,6 +19,7 @@ end
 trampolin["onCollisionEnter"] = function(_self, lua, other)
     print( other:getName())
     if other:getName() == "Bird" then
+        lua:playSound("Assets/Music/Jump.wav")
         lua:getRigidbody(other):addForce1(Vector3(0, _self.strength, 0),
                                           Vector3(0, 0, 0), 1)
  

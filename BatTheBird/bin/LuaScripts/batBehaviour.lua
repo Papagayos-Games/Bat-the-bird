@@ -108,6 +108,8 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
             lua:getOgreContext():changeMaterialScroll("SkyPlaneMat2", -0.1, 0)
             lua:getOgreContext():changeMaterialScroll("cesped_MAT", -0.1, 0)
 
+            lua:playSound("Assets/Music/Impact.wav")
+
             _self.batted = true
             _self.allowBone = true
             _self.time =  0
@@ -152,6 +154,7 @@ batBehaviour["onCollisionEnter"] = function(_self, lua, other)
         
         _self.bounces = _self.bounces + 1
         if(_self.bounces >= _self.maxBounces) then
+            lua:playSound("Assets/Music/WinTheme.wav")
             lua:changeScene("gameOver")
             lua:getLuaSelf(lua:getEntity("gameManager"), "score").registerScore()
         end

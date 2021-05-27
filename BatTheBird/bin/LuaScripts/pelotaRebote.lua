@@ -10,6 +10,7 @@ end
 -- El escudo  da mas fuerza al 
 pelotaRebote["onCollisionEnter"] = function(_self, lua, other)
     if other:getName() == "Bird" then
+        lua:playSound("Assets/Music/PowerUp2.wav")
         local batcomponent = lua:getLuaSelf(other, "batBehaviour")
         batcomponent.escudo = true
         lua:getCurrentScene():destroyEntity(_self.entity)
