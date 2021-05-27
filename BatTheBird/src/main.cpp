@@ -24,7 +24,8 @@ int main() {
 			"DejaVuSans-12.font", 
 			"Scenes/scenes.json",
 			"Assets/Music/MainTheme.wav",
-			"SkyPlaneMat"
+			"SkyPlaneMat",
+			-20.0
 		);
 	}
 	catch (std::exception e) {
