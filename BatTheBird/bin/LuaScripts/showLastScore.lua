@@ -21,6 +21,9 @@ UIScore["instantiate"] = function(params, entity)
 end
 
 UIScore["start"] = function(_self, lua)
+    local ogreContext = lua:getOgreContext()
+    ogreContext:setSkyPlane("SkyPlaneMat", -70, 10,10,0.0)
+
     _self.button = lua:getUIButton(_self.entity)
     local s = lua:getLuaSelf(_self.entity, "score")
     local text = s.getLastScore()

@@ -38,6 +38,13 @@ batBehaviour["instantiate"] = function(params, entity)
     -- Contador de rebotes 
     self.bounces = 0
     self.maxBounces = 2
+    
+    -- Factor para reducir la recuperacion de hueso
+    self.boneFactor = 0.2
+
+    -- Segundos en los que se recargara el hueso
+    self.boneRecharge = 5.0
+    self.allowBone = false
 
     -- Parametros personalizados desde json
     if p ~=nil then
@@ -49,6 +56,12 @@ batBehaviour["instantiate"] = function(params, entity)
         end
         if p.sweetspot ~= nil then
             self.sweetspot = p.sweetspot
+        end
+        if p.boneFactor ~= nil then
+            self.boneFactor = p.boneFactor
+        end
+        if p.boneRecharge ~= nil then
+            self.boneRecharge = p.boneRecharge
         end
     end
         
@@ -84,7 +97,6 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
             local strength = _self.strength * _self.batTime
             _self.rb:addForce1(Vector3(0, strength, 0), Vector3(0, 0, 0), 1)          
             lua:getLuaSelf(lua:getEntity("gameManager"), "gameManager").modSpawners(true, _self.xFactor * strength) --velocidad en x inicial de los spawners
-            print(_self.strength)
             
             -- La camara pasa a seguir al pajaro
             local cameraFollow = lua:getLuaSelf(lua:getEntity("defaultCamera"), "followTarget")
@@ -94,12 +106,13 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
             lua:getOgreContext():changeMaterialScroll("SkyPlaneMat2", -0.1, 0)
 
             _self.batted = true
+            _self.allowBone = true
             _self.time =  0
 
         -- Controla el uso del hueso de la suerte siempre que tenga carga
         else
-            if _self.time > 0 then
-                _self.rb:addForce1(Vector3(0, _self.strength, 0),
+            if _self.allowBone and _self.time > 0 then
+                _self.rb:addForce1(Vector3(0, _self.strength * _self.boneFactor, 0),
                                    Vector3(0, 0, 0), 0)
                 _self.time = _self.time - deltaTime
             end
@@ -119,8 +132,9 @@ batBehaviour["update"] = function(_self, lua, deltaTime)
             
             end
         -- Recarga del hueso de la suerte cuando no se usa
-        elseif _self.time < 5 then
-            _self.time = _self.time + deltaTime / 2
+        elseif _self.time < _self.boneRecharge then
+            _self.time = _self.time + deltaTime
+            --print(_self.time)
         end
     end
 end

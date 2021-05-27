@@ -101,16 +101,11 @@ spawner["update"] = function(_self, lua, deltaTime)
         -- Actualizacion de la velocidad
         if _self.xSpeed > _self.speedLimit then
             _self.xSpeed = _self.xSpeed - _self.slowAcc * deltaTime
-            print(_self.xSpeed)
         else
             _self.spawning = false
         end
 
         if (lua:getInputManager():getTicks() - _self.timeSinceSpawn) / 1000 >= _self.timeToSpawn then
-            -- print(_self.spawnObject)
-            -- print("SPAWNEO:")
-            -- print(_self.spawnObject)
-            -- print(_self.timeToSpawn)
             local objectSpawned = lua:instantiate(_self.spawnObject)
             objectSpawned:start()
             createfunc(_self, lua, objectSpawned)

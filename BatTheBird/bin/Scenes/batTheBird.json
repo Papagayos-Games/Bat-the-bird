@@ -71,7 +71,7 @@
           "Type": "UI",
           "Parameters": {
             "position": [
-              0.1,
+              0.05,
               0.2
             ],
             "size": [
@@ -100,7 +100,49 @@
           "Component": "barraBateo",
           "Type": "LUA",
           "Parameters": {
-            
+            "active" : true
+          }
+        }
+      ]
+    },
+    {
+      "Name": "huesoImage",
+      "Components": [
+        {
+          "Component": "Image",
+          "Type": "UI",
+          "Parameters": {
+            "position": [
+              0.04,
+              0.2
+            ],
+            "size": [
+              150,
+              400
+            ],
+            "name": "BarraHuesoImage",
+            "type": "StaticImage",
+            "property": [
+              [
+                "Image",
+                "TaharezLook/BarraHueso100"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
+          }
+        },
+        {
+          "Component": "barraHueso",
+          "Type": "LUA",
+          "Parameters": {
+            "active" : false
           }
         }
       ]
