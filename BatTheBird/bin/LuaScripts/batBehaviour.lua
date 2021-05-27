@@ -63,19 +63,6 @@ batBehaviour["instantiate"] = function(params, entity)
     self.topLimit = self.sweetspot - self.range
     self.botLimit = self.sweetspot + self.range
 
-
-    -- Resetea todos los valores y llama al gameManager pasandole 
-    -- la puntuacion de este intento
-    self.finTurno = function (lua)
-        -- self.rb:setLinearVelocity(Vector3(0, 0, 0))
-        -- self.rb:setPosition(Vector3(self.startPos.x, self.startPos.y, self.startPos.z))
-        -- self.time = 0;
-        -- self.batted = false
-        -- self.batTime = 0
-        -- self.passHighestStrenght = false;
-        lua:getLuaSelf(lua:getEntity("gameManager"), "gameManager").pasaTurno(lua) -- pasar puntuacion
-    end
-
     return self
 end
 
@@ -148,7 +135,8 @@ batBehaviour["onCollisionEnter"] = function(_self, lua, other)
         
         _self.bounces = _self.bounces + 1
         if(_self.bounces >= _self.maxBounces) then
-            _self.finTurno(lua)    -- 
+            lua:changeScene("gameOver")
+            lua:getLuaSelf(lua:getEntity("gameManager"), "score").registerScore()
         end
         _self.batted = true
     end
