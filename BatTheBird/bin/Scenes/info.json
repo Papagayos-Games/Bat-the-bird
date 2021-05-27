@@ -20,8 +20,8 @@
           "Component": "Image",
           "Type": "UI",
           "Parameters": {
-            "position": [ 0.1, 0.1 ],
-            "size": [ 1280, 720 ],
+            "position": [ 0.1, 0.075 ],
+            "size": [ 1260, 700 ],
             "name": "InfoImage",
             "type": "StaticImage",
             "property": [

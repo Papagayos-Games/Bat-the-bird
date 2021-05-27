@@ -4,7 +4,7 @@
       "Component": "Button",
       "Type": "UI",
       "Parameters": {
-        "position": [ 0.15, 0.30 ],
+        "position": [ 0.15, 0.85 ],
         "size": [ 320, 90 ],
         "name": "BackButton",
         "text": "",
