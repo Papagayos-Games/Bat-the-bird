@@ -1,11 +1,16 @@
+local JSON = assert(loadfile "LuaScripts/json.lua")()
+
 local destroyAtPos = {}
 
 destroyAtPos["instantiate"] = function(params, entity)
+    p = JSON:decode(params)
     local self = {}
     self.entity = entity
     self.limitX = -220
-    if p.limitX ~= nil then
-        self.limitX = p.limitX
+    if p ~= nil then
+        if p.limitX ~= nil then
+            self.limitX = p.limitX
+        end
     end
     return self
 end

@@ -2,6 +2,9 @@
     <Image height="464" name="MenuBg" width="651" xPos="0" yPos="256" />
     <Image height="154" name="ButtonBg" width="257" xPos="512" yPos="0" />
 
+    <Image height="128" name="SalirInGameNormalButton" width="128" xPos="768" yPos="0" />
+    <Image height="128" name="SalirInGameHoverButton" width="128" xPos="896" yPos="0" />
+    <Image height="128" name="SalirInGamePushButton" width="128" xPos="768" yPos="128" />
 
     <Image height="128" name="PlayNormalButton" width="255" xPos="1024" yPos="0" />
     <Image height="128" name="PlayHoverButton" width="255" xPos="1792" yPos="0" />
