@@ -23,7 +23,7 @@ int main() {
 			"TaharezLook.scheme", 
 			"DejaVuSans-12.font", 
 			"Scenes/scenes.json",
-			"Assets/badbunny.mp3",
+			"Assets/Music/badbunny.mp3",
 			"SkyPlaneMat"
 		);
 	}

@@ -23,7 +23,6 @@ UIScore["instantiate"] = function(params, entity)
 end
 
 UIScore["start"] = function(_self, lua)
-    print(_self.entity:getName())
     _self.button = lua:getUIButton(_self.entity)
     local s = lua:getLuaSelf(lua:getEntity("gameManager"), "score")
     local text = s.getActualScore()

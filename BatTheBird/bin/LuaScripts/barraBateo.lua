@@ -1,9 +1,22 @@
+local JSON = assert(loadfile "LuaScripts/JSON.lua")()
+
 local barraBateo = {}
 
 barraBateo["instantiate"] = function(params, entity)
-
+    local p = JSON:decode(params)
     local self = {}
     self.entity = entity
+    self.active = true
+    self.texture = "TaharezLook/BarraBateo"
+    if p ~= nil then
+        if p.active ~= nil then
+            self.active = p.active
+        end
+        if p.texture ~= nil then
+            self.texture = p.texture
+        end
+    end
+
     return self
 end
 
@@ -11,37 +24,36 @@ barraBateo["start"] = function(_self, lua)
     -- Cogemos la imagen de la barra
     _self.image = lua:getUIImage(_self.entity)
     -- Referencia al pajaro para calcular la posicion de la barra en base a sus parametros
-    _self.batBehaviour = lua:getLuaSelf(lua:getCurrentScene():getEntity("Bird"),
-                                        "batBehaviour")
-    _self.image:setProperty("Image", "TaharezLook/BarraBateo0")
+    _self.batBehaviour = lua:getLuaSelf(lua:getCurrentScene():getEntity("Bird"), "batBehaviour")
+    _self.image:setProperty("Image", _self.texture .. "0")
+    lua:getUIImage(_self.entity):setActive(_self.active)
 end
 
 barraBateo["update"] = function(_self, lua, deltaTime)
 
     if not _self.batBehaviour.batted then
+        lua:getUIImage(_self.entity):setActive(true)
         -- Si el pájaro aun está a rango de ser bateado
-        if _self.batBehaviour.time < _self.batBehaviour.botLimit and
-            _self.batBehaviour.time > _self.batBehaviour.topLimit then
-
+        if _self.batBehaviour.time < _self.batBehaviour.botLimit and _self.batBehaviour.time > _self.batBehaviour.topLimit then
             -- Calculamos en que "rango" de % de la barra en el que se encuentra
-            local operacion = _self.batBehaviour.strength *
-                                  _self.batBehaviour.batTime
-            local maxStrenght = _self.batBehaviour.strength *
-                                    _self.batBehaviour.range
-
+            local operacion = _self.batBehaviour.strength * _self.batBehaviour.batTime
+            local maxStrenght = _self.batBehaviour.strength * _self.batBehaviour.range
             if operacion <= maxStrenght * 0.25 then
-                _self.image:setProperty("Image", "TaharezLook/BarraBateo25")
+                _self.image:setProperty("Image", _self.texture .. "25")
             elseif operacion <= maxStrenght * 0.5 then
-                _self.image:setProperty("Image", "TaharezLook/BarraBateo50")
+                _self.image:setProperty("Image", _self.texture .. "50")
             elseif operacion <= maxStrenght * 0.75 then
-                _self.image:setProperty("Image", "TaharezLook/BarraBateo75")
+                _self.image:setProperty("Image", _self.texture .. "75")
             elseif operacion <= maxStrenght * 0.9 then
-                _self.image:setProperty("Image", "TaharezLook/BarraBateo100")
+                _self.image:setProperty("Image", _self.texture .. "100")
             end
         else
             -- Si ya no esta a rango, asignamos el minimmo
-            _self.image:setProperty("Image", "TaharezLook/BarraBateo0")
+            _self.image:setProperty("Image", _self.texture .. "0")
         end
+    else
+        lua:getUIImage(_self.entity):setActive(false)
+
     end
 
 end

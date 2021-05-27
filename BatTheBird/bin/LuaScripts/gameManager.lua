@@ -3,26 +3,6 @@ local gameManager = {}
 gameManager["instantiate"] = function(params, entity)
     local self = {}
     self.entity = entity
-    self.turnos = 3
-
-    self.pasaTurno = function (lua)
-        -- Acumular la puntuacion
-        -- Apuntar el turno en un archivo externo
-        self.turnos = self.turnos - 1
-        print(self.turnos)
-        -- local camera = lua:getEntity("defaultCamera")        
-        -- -- Resetea la posicion de la camara 
-        -- lua:getTransform(camera):setPosition(Vector3(0, 80, 300))
-        -- -- La camara deja de seguir al pajaro
-        -- lua:getLuaSelf(lua:getEntity("defaultCamera"), "followTarget").setFollow(false)        
-        -- self.modSpawners(false, 0)
-
-        if self.turnos <= 0 then
-            lua:changeScene("gameOver")
-        else
-            lua:changeScene("batTheBird")
-        end
-    end
     return self
 end
 
