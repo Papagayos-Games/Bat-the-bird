@@ -1,12 +1,17 @@
 {
+  "Name": "ScorePanel",
   "Components": [
+    {
+      "Component": "Transform",
+      "Type":  "Common"
+    },
     {
       "Component": "Button",
       "Type": "UI",
       "Parameters": {
         "position": [ 0.65, 0.08 ],
         "size": [ 200, 75 ],
-        "name": "ScoreButton",
+        "name": "ScorePanel",
         "text": "",
         "type": "Button",
         "property": [
@@ -24,6 +29,10 @@
           ]
         ]
       }
+    },
+    {
+      "Component": "showScore",
+      "Type": "LUA"
     }
   ]
 }

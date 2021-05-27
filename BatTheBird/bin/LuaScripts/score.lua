@@ -12,23 +12,22 @@ score["instantiate"] = function(params, entity)
     self.fileName = "Scores.txt"
     self.path = "\\Assets\\"
 
-    
     if p ~= nil then
-        
-        if p.fileName ~= nil then self.fileName = p.fileName end
-        
-        if p.maxScores ~= nil then self.maxScores = p.maxScores end
-        
+
+    if p.fileName ~= nil then self.fileName = p.fileName end
+
+    if p.maxScores ~= nil then self.maxScores = p.maxScores end
+
     end
-    
+
     local f = assert(io.popen "cd")
     local current_dir = f:read '*l'
     assert(f:close())
-    
+
     local path_ = current_dir .. self.path .. self.fileName
-    
+
     local file = assert(io.open(path_))
-    
+
     if file == nil then
         print("No se ha podido abrir el archivo " .. self.path .. self.fileName)
         local fileCre = assert(io.open(path_, "w"))

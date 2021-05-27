@@ -285,9 +285,15 @@
           }
         },
         {
-          "Name" : "gameManager",
           "Component": "gameManager",
           "Type": "LUA"
+        },
+        {
+          "Component": "score",
+          "Type": "LUA",
+          "Parameters": {
+            "maxScores": 3
+          }
         }
       ]
     }

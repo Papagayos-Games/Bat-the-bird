@@ -60,6 +60,29 @@
           }
         }
       ]
+    },
+    {
+      "Name": "gameManager",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "Component": "score",
+          "Type": "LUA",
+          "Parameters": {
+            "maxScores": 3
+          }
+        }
+      ]
     }
   ]
 }
